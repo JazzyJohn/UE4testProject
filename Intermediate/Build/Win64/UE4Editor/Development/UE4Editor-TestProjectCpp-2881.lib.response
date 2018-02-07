@@ -1,0 +1,30 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TestProjectCpp-2881.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\BaseWeapon.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\NPCCharacter.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCpp.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppCharacter.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppGameMode.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppHUD.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppProjectile.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\JetPackCharacter.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\JetPackMovementComponent.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\BaseWeapon.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\JetPackCharacter.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\JetPackMovementComponent.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\NPCCharacter.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCpp.init.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppCharacter.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppGameMode.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppHUD.gen.cpp.obj"
+"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\TestProjectCppProjectile.gen.cpp.obj"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\TestProjectCpp\PCLaunch.rc.res"
+"C:\Program Files\Epic Games\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TestProjectCpp-2881.lib"

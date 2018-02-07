@@ -1,0 +1,3 @@
+C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Source\TestProjectCpp\TestProjectCpp.Build.cs
+C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Source\TestProjectCpp.Target.cs
+C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Source\TestProjectCppEditor.Target.cs
