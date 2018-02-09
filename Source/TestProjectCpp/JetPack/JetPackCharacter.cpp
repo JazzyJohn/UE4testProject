@@ -4,6 +4,8 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "JetPackMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
+
 #include "Public/TimerManager.h"
 
 
@@ -13,14 +15,16 @@ AJetPackCharacter::AJetPackCharacter(const FObjectInitializer& ObjectInitializer
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	MaxHealth = 10;
+	Health = MaxHealth;
 }
 
 // Called when the game starts or when spawned
 void AJetPackCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	LastTeleportPosition = GetActorLocation();
+	LastTeleportRotation = GetActorRotation();
 }
 
 // Called every frame
@@ -84,6 +88,15 @@ bool AJetPackCharacter::IsCrouch()
 	return false;
 }
 
+bool AJetPackCharacter::GetJetPackRechrageStatus()
+{
+	if (UJetPackMovementComponent* MovementComponent = Cast<UJetPackMovementComponent>(GetCharacterMovement()))
+	{
+		return MovementComponent->GetRechargeOfJetPack();
+	}
+	return true;
+}
+
 void AJetPackCharacter::OnFire()
 {
 	if (BaseWeapon)
@@ -135,5 +148,31 @@ void AJetPackCharacter::StopJumping()
 {
 	Super::StopJumping();
 	StopJetPack();
+	
 
 }
+
+float AJetPackCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	Health--;
+	if (Health <= 0)
+	{
+		Health = MaxHealth;
+		TeleportTo(LastTeleportPosition, LastTeleportRotation);
+	}
+	return Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+}
+
+
+void AJetPackCharacter::OnTeleport()
+{
+	if (UJetPackMovementComponent* MovementComponent = Cast<UJetPackMovementComponent>(GetCharacterMovement()))
+	{
+		MovementComponent->RechargeJetPack();
+
+		LastTeleportPosition = GetActorLocation();
+		LastTeleportRotation = GetActorRotation();
+	}
+}
+
+

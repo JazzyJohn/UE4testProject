@@ -3,6 +3,7 @@
 #include "JetPackMovementComponent.h"
 #include "Public/DrawDebugHelpers.h"
 #include "Components/AudioComponent.h"
+#include "Components/PrimitiveComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 template<typename TEnum>
@@ -167,7 +168,7 @@ void UJetPackMovementComponent::Flying(float DeltaTime)
 		StopFly();
 	}
 	
-	Velocity += FVector::UpVector * FlySpeed * DeltaTime;
+	Velocity.Z = FlySpeed ;
 	CheckWall();
 
 }
@@ -202,6 +203,7 @@ void UJetPackMovementComponent::WallRun(float DeltaTime)
 	}
 	else
 	{
+		CurrentCharge = 0.0f;
 		StopWall ();
 	}
 	
@@ -210,7 +212,7 @@ void UJetPackMovementComponent::WallRun(float DeltaTime)
 
 void UJetPackMovementComponent::StopWall()
 {
-	CurrentCharge = 0.0f;
+	
 	AirControl = DefaultAirControl;
 	CurrentJetPackStatus = EJetPackStatus::None;
 	if (AudioComponent)
@@ -279,7 +281,7 @@ bool UJetPackMovementComponent::TraceWall(FVector location, FRotator Direction, 
 
 	GetWorld()->LineTraceSingleByChannel(Hit, StartTrace, EndTrace, ECollisionChannel::ECC_WorldDynamic, TraceParams);
 
-	return Hit.GetActor() != nullptr;
+	return Hit.GetActor() != nullptr && Hit.Component.IsValid() && Hit.Component.Get()->CanCharacterStepUp(GetPawnOwner());
 }
 
 

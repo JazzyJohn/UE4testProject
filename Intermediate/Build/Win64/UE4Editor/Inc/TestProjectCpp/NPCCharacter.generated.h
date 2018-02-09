@@ -24,11 +24,28 @@ class AActor;
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execResurect) \
+	DECLARE_FUNCTION(execCleanResurrecter) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->Resurect(); \
+		this->CleanResurrecter(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execResurrect) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->Resurrect(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCouldBeResurrected) \
+	{ \
+		P_GET_OBJECT(AActor,Z_Param_ResurrecterActor); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=this->CouldBeResurrected(Z_Param_ResurrecterActor); \
 		P_NATIVE_END; \
 	} \
  \
@@ -68,11 +85,28 @@ class AActor;
 		P_NATIVE_END; \
 	} \
  \
-	DECLARE_FUNCTION(execResurect) \
+	DECLARE_FUNCTION(execCleanResurrecter) \
 	{ \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		this->Resurect(); \
+		this->CleanResurrecter(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execResurrect) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->Resurrect(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execCouldBeResurrected) \
+	{ \
+		P_GET_OBJECT(AActor,Z_Param_ResurrecterActor); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=this->CouldBeResurrected(Z_Param_ResurrecterActor); \
 		P_NATIVE_END; \
 	} \
  \

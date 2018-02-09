@@ -17,11 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeNPCCharacter() {}
 	TESTPROJECTCPP_API UClass* Z_Construct_UClass_ANPCCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_TestProjectCpp();
-	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_FireAtActor();
+	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_CleanResurrecter();
+	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_CouldBeResurrected();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_FireAtActor();
 	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_GetHealth();
 	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_IsFallen();
-	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_Resurect();
+	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_Resurrect();
 	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ANPCCharacter_Sucide();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	TESTPROJECTCPP_API UClass* Z_Construct_UClass_ATestProjectCppProjectile_NoRegister();
@@ -31,13 +33,59 @@ void EmptyLinkFunctionForGeneratedCodeNPCCharacter() {}
 	{
 		UClass* Class = ANPCCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "CleanResurrecter", (Native)&ANPCCharacter::execCleanResurrecter },
+			{ "CouldBeResurrected", (Native)&ANPCCharacter::execCouldBeResurrected },
 			{ "FireAtActor", (Native)&ANPCCharacter::execFireAtActor },
 			{ "GetHealth", (Native)&ANPCCharacter::execGetHealth },
 			{ "IsFallen", (Native)&ANPCCharacter::execIsFallen },
-			{ "Resurect", (Native)&ANPCCharacter::execResurect },
+			{ "Resurrect", (Native)&ANPCCharacter::execResurrect },
 			{ "Sucide", (Native)&ANPCCharacter::execSucide },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_ANPCCharacter_CleanResurrecter()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "NPC Logic" },
+				{ "ModuleRelativePath", "NPCCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCCharacter, "CleanResurrecter", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_ANPCCharacter_CouldBeResurrected()
+	{
+		struct NPCCharacter_eventCouldBeResurrected_Parms
+		{
+			AActor* ResurrecterActor;
+			bool ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			auto NewProp_ReturnValue_SetBit = [](void* Obj){ ((NPCCharacter_eventCouldBeResurrected_Parms*)Obj)->ReturnValue = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Bool, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(NPCCharacter_eventCouldBeResurrected_Parms), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_ReturnValue_SetBit)>::SetBit, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ResurrecterActor = { UE4CodeGen_Private::EPropertyClass::Object, "ResurrecterActor", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(NPCCharacter_eventCouldBeResurrected_Parms, ResurrecterActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ResurrecterActor,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Fight Logic" },
+				{ "ModuleRelativePath", "NPCCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCCharacter, "CouldBeResurrected", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(NPCCharacter_eventCouldBeResurrected_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UFunction* Z_Construct_UFunction_ANPCCharacter_FireAtActor()
 	{
@@ -112,18 +160,18 @@ void EmptyLinkFunctionForGeneratedCodeNPCCharacter() {}
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_ANPCCharacter_Resurect()
+	UFunction* Z_Construct_UFunction_ANPCCharacter_Resurrect()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "Category", "Fight Logic" },
+				{ "Category", "NPC Logic" },
 				{ "ModuleRelativePath", "NPCCharacter.h" },
 			};
 #endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCCharacter, "Resurect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCCharacter, "Resurrect", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -158,10 +206,12 @@ void EmptyLinkFunctionForGeneratedCodeNPCCharacter() {}
 				(UObject* (*)())Z_Construct_UPackage__Script_TestProjectCpp,
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_ANPCCharacter_CleanResurrecter, "CleanResurrecter" }, // 2714486144
+				{ &Z_Construct_UFunction_ANPCCharacter_CouldBeResurrected, "CouldBeResurrected" }, // 860541974
 				{ &Z_Construct_UFunction_ANPCCharacter_FireAtActor, "FireAtActor" }, // 2308045310
 				{ &Z_Construct_UFunction_ANPCCharacter_GetHealth, "GetHealth" }, // 3430211719
 				{ &Z_Construct_UFunction_ANPCCharacter_IsFallen, "IsFallen" }, // 2814549500
-				{ &Z_Construct_UFunction_ANPCCharacter_Resurect, "Resurect" }, // 2784504608
+				{ &Z_Construct_UFunction_ANPCCharacter_Resurrect, "Resurrect" }, // 2134924695
 				{ &Z_Construct_UFunction_ANPCCharacter_Sucide, "Sucide" }, // 363128972
 			};
 #if WITH_METADATA
@@ -264,7 +314,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ANPCCharacter, 3147855553);
+	IMPLEMENT_CLASS(ANPCCharacter, 4041658209);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ANPCCharacter(Z_Construct_UClass_ANPCCharacter, &ANPCCharacter::StaticClass, TEXT("/Script/TestProjectCpp"), TEXT("ANPCCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ANPCCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

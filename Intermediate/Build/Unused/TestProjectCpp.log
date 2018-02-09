@@ -1,0 +1,67 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Creating makefile for TestProjectCppEditor (no existing makefile)
+  Parsing headers for TestProjectCppEditor
+    Running UnrealHeaderTool "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\TestProjectCpp.uproject" "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\TestProjectCppEditor\Development\TestProjectCppEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for TestProjectCppEditor in 7.5191909 seconds
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1381.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1381.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1406.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1406.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1428.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1428.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1556.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1556.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1642.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1642.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1948.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-1948.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2057.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2057.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2214.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2214.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2584.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2584.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2620.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-2620.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-3210.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-3210.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-3738.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-3738.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4276.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4276.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4549.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4549.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4969.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-4969.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-5376.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-5376.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-551.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-551.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-5918.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-5918.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-6547.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-6547.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-6982.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-6982.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-7442.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-7442.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-7761.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-7761.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-790.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-790.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-8350.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-8350.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-9037.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-9037.pdb".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-9542.dll".
+  Deleting old hot reload file: "C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Binaries\Win64\UE4Editor-TestProjectCpp-9542.pdb".
+  Performing 5 actions (4 in parallel)
+  Portal.cpp
+  Portal.gen.cpp
+  TestProjectCpp.init.gen.cpp
+  [4/5] Link UE4Editor-TestProjectCpp.dll
+  [5/5] Link UE4Editor-TestProjectCpp.lib
+     Creating library C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TestProjectCpp.lib and object C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TestProjectCpp.exp
+     Creating library C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TestProjectCpp.suppressed.lib and object C:\Users\vania\Documents\Unreal Projects\TestProjectCpp\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TestProjectCpp.suppressed.exp
+  Deploying TestProjectCppEditor Win64 Development...
+  Total build time: 114.52 seconds (Local executor: 99.59 seconds)

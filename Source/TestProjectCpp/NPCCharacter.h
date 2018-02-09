@@ -37,7 +37,7 @@ public:
 		/** Projectile class to spawn */
 		UPROPERTY(EditDefaultsOnly, Category = "Fight Logic")
 		TSubclassOf<class ATestProjectCppProjectile> ProjectileClass;
-
+		TWeakObjectPtr<ANPCCharacter> Resurrecter;
 private:
 
 	int CurrentHitCount;
@@ -67,9 +67,14 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Fight Logic")
 		bool IsFallen();
-
 	UFUNCTION(BlueprintCallable, Category = "Fight Logic")
-		void Resurect();
+		bool CouldBeResurrected(AActor* ResurrecterActor);
+
+	UFUNCTION(BlueprintCallable, Category = "NPC Logic")
+		void Resurrect();
+
+	UFUNCTION(BlueprintCallable, Category = "NPC Logic")
+		void CleanResurrecter();
 
 	UFUNCTION(BlueprintCallable, Category = "NPC Logic")
 		int GetHealth() { return CurrentHitCount; }

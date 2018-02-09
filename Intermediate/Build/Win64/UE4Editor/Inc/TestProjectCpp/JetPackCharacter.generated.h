@@ -13,8 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TESTPROJECTCPP_JetPackCharacter_generated_h
 
-#define TestProjectCpp_Source_TestProjectCpp_JetPack_JetPackCharacter_h_14_RPC_WRAPPERS
-#define TestProjectCpp_Source_TestProjectCpp_JetPack_JetPackCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define TestProjectCpp_Source_TestProjectCpp_JetPack_JetPackCharacter_h_14_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnTeleport) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnTeleport(); \
+		P_NATIVE_END; \
+	}
+
+
+#define TestProjectCpp_Source_TestProjectCpp_JetPack_JetPackCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnTeleport) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->OnTeleport(); \
+		P_NATIVE_END; \
+	}
+
+
 #define TestProjectCpp_Source_TestProjectCpp_JetPack_JetPackCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAJetPackCharacter(); \

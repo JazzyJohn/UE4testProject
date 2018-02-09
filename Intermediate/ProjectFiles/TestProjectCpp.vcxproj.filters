@@ -1,97 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\TestProjectCpp.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{F78B1954-1140-4669-B419-3920FE2FF73E}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\TestProjectCpp.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\TestProjectCppEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{3A105207-0061-448E-9BF8-5B970C4E41DC}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\TestProjectCpp">
-			<UniqueIdentifier>{6EB9E5C0-52F1-44A6-B6F7-DF49B64826AD}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\TestProjectCpp\BaseWeapon.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\BaseWeapon.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\NPCCharacter.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\NPCCharacter.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<None Include="..\..\Source\TestProjectCpp\TestProjectCpp.Build.cs">
-			<Filter>Source\TestProjectCpp</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCpp.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCpp.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppCharacter.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppCharacter.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppGameMode.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppGameMode.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppHUD.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppHUD.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppProjectile.cpp">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppProjectile.h">
-			<Filter>Source\TestProjectCpp</Filter>
-		</ClInclude >
-		<Filter Include="Source\TestProjectCpp\JetPack">
-			<UniqueIdentifier>{348897C0-748C-4009-B903-416CB0EBDEBC}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\TestProjectCpp\JetPack\JetPackCharacter.cpp">
-			<Filter>Source\TestProjectCpp\JetPack</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\JetPack\JetPackCharacter.h">
-			<Filter>Source\TestProjectCpp\JetPack</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TestProjectCpp\JetPack\JetPackMovementComponent.cpp">
-			<Filter>Source\TestProjectCpp\JetPack</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TestProjectCpp\JetPack\JetPackMovementComponent.h">
-			<Filter>Source\TestProjectCpp\JetPack</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\TestProjectCpp.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{5F5A3034-8E8C-4F1F-AD97-D07042EBEF79}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TestProjectCpp.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TestProjectCppEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{4C582DE4-F5F1-497C-8E5B-EFA784E8A2E0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TestProjectCpp">
+      <UniqueIdentifier>{333017E7-9375-4C5B-8482-AADF503B438C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TestProjectCpp\BaseWeapon.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\BaseWeapon.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\NPCCharacter.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\NPCCharacter.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\Portal.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\Portal.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\TestProjectCpp\TestProjectCpp.Build.cs">
+      <Filter>Source\TestProjectCpp</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCpp.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCpp.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppCharacter.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppCharacter.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppGameMode.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppGameMode.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppHUD.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppHUD.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\TestProjectCppProjectile.cpp">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\TestProjectCppProjectile.h">
+      <Filter>Source\TestProjectCpp</Filter>
+    </ClInclude>
+    <Filter Include="Source\TestProjectCpp\JetPack">
+      <UniqueIdentifier>{B5DC957E-EDF0-4006-8633-5A0438951B68}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TestProjectCpp\JetPack\JetPackCharacter.cpp">
+      <Filter>Source\TestProjectCpp\JetPack</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\JetPack\JetPackCharacter.h">
+      <Filter>Source\TestProjectCpp\JetPack</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestProjectCpp\JetPack\JetPackMovementComponent.cpp">
+      <Filter>Source\TestProjectCpp\JetPack</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestProjectCpp\JetPack\JetPackMovementComponent.h">
+      <Filter>Source\TestProjectCpp\JetPack</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

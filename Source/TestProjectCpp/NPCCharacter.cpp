@@ -2,6 +2,7 @@
 
 #include "NPCCharacter.h"
 #include "Public/TimerManager.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 ANPCCharacter::ANPCCharacter()
@@ -37,7 +38,7 @@ void ANPCCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void ANPCCharacter::FireAtActor(AActor* FireTarget)
 {
-	if (MuzzleLocation)
+	if (MuzzleLocation && FireTarget)
 	{
 		FRotator SpawnRotation;
 	
@@ -59,13 +60,14 @@ void ANPCCharacter::FireAtActor(AActor* FireTarget)
 	}
 }
 
-void ANPCCharacter::Resurect()
+void ANPCCharacter::Resurrect()
 {
 	if (FractionOfMaxHithOnResurect != 0)
 	{
 		bIsFallen = false;
 		CurrentHitCount = MaxHitCount / FractionOfMaxHithOnResurect;
 		GetWorldTimerManager().ClearTimer(MemberTimerHandle);
+		GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Block);
 	}
 }
 
@@ -84,6 +86,7 @@ void ANPCCharacter::FallInGround()
 {
 	bIsFallen = true;
 	GetWorldTimerManager().SetTimer(MemberTimerHandle, this, &ANPCCharacter::Death, FallenTimeout);
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Ignore);
 }
 
 bool ANPCCharacter::IsFallen()
@@ -93,6 +96,12 @@ bool ANPCCharacter::IsFallen()
 
 float ANPCCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {	
+	float superResult = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	if (ANPCCharacter* other = Cast<ANPCCharacter>(DamageCauser))
+	{
+		//No FriendlyFire for NPC
+		return superResult;
+	}
 	if (CurrentHitCount != 0)
 	{
 		CurrentHitCount--;
@@ -101,6 +110,34 @@ float ANPCCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageE
 			FallInGround();
 		}
 	}
-	return Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	return superResult;
 }
 
+bool ANPCCharacter::CouldBeResurrected(AActor* ResurrecterActor)
+{
+	if (!bIsFallen)
+	{
+		return false;
+	}
+	
+	if (!Resurrecter.IsValid())
+	{
+		ANPCCharacter* ResurrecterCharacter = Cast<ANPCCharacter>(ResurrecterActor);
+		if (ResurrecterCharacter)
+		{
+			Resurrecter = ResurrecterCharacter;			
+			return true;
+		}
+
+	}
+	else if (Resurrecter.Get() == ResurrecterActor)
+	{
+		return true;
+	}
+	return false;
+}
+
+void ANPCCharacter::CleanResurrecter()
+{
+	Resurrecter.Reset();
+}

@@ -32,29 +32,6 @@ class TESTPROJECTCPP_API UJetPackMovementComponent : public UCharacterMovementCo
 {
 	GENERATED_BODY()
 public:
-	UJetPackMovementComponent();
-
-    virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
-	virtual void Serialize(FArchive& Archive) override;
-	virtual float GetMaxSpeed() const override;
-
-	bool Burst();
-	float GetJetPackCharge();
-	void TryFly();
-	void Flying(float DeltaTime);
-	void StopFly();
-	void StartFly();
-	void CheckWall();
-	bool TraceWall(FVector location, FRotator Direction, FHitResult& Hit);
-	void WallRun(float DeltaTime);
-	void StopWall();
-	/** Set state of recharge of jetPAck over time, when set to flase, jet pack recharging only by picking fuel cell**/
-	UFUNCTION(BlueprintCallable, Category = "Jet Pack")
-		void SetRechargeOfJetPack(bool state) { IsJetPackRechargeable = state; }
-	/** Set JetPack Chrage at Max**/
-	UFUNCTION(BlueprintCallable, Category = "Jet Pack")
-		void RechargeJetPack() { CurrentCharge = MaxCharge;  }
-public:	
 	UPROPERTY(EditAnywhere, Category = "Jet Pack")
 		float MaxCharge;
 	UPROPERTY(EditAnywhere, Category = "Jet Pack")
@@ -96,6 +73,32 @@ private:
 	EWallRun WallRunType;
 	FVector WallNormal;
 	bool IsJetPackRechargeable;
+
+public:
+	UJetPackMovementComponent();
+
+    virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+	virtual void Serialize(FArchive& Archive) override;
+	virtual float GetMaxSpeed() const override;
+
+	bool Burst();
+	float GetJetPackCharge();
+	void TryFly();
+	void Flying(float DeltaTime);
+	void StopFly();
+	void StartFly();
+	void CheckWall();
+	bool TraceWall(FVector location, FRotator Direction, FHitResult& Hit);
+	void WallRun(float DeltaTime);
+	void StopWall();
+	/** Set state of recharge of jetPAck over time, when set to flase, jet pack recharging only by picking fuel cell**/
+	UFUNCTION(BlueprintCallable, Category = "Jet Pack")
+		void SetRechargeOfJetPack(bool state) { IsJetPackRechargeable = state; }
+
+	bool GetRechargeOfJetPack() { return IsJetPackRechargeable; }
+	/** Set JetPack Chrage at Max**/
+	UFUNCTION(BlueprintCallable, Category = "Jet Pack")
+		void RechargeJetPack() { CurrentCharge = MaxCharge;  }
 
 
 };

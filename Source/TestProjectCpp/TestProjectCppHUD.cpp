@@ -16,6 +16,8 @@ ATestProjectCppHUD::ATestProjectCppHUD()
 	// Set the crosshair texture
 	static ConstructorHelpers::FObjectFinder<UTexture2D> CrosshairTexObj(TEXT("/Game/FirstPerson/Textures/FirstPersonCrosshair"));
 	CrosshairTex = CrosshairTexObj.Object;
+	static ConstructorHelpers::FObjectFinder<UTexture2D> NoFuelTextObj(TEXT("/Game/Images/nofuel"));
+	NoFuelText = NoFuelTextObj.Object;
 }
 
 
@@ -41,7 +43,17 @@ void ATestProjectCppHUD::DrawHUD()
 	
 	if (AJetPackCharacter* jetPackController = Cast<AJetPackCharacter>(GetOwningPlayerController()->GetCharacter()))
 	{
-		FCanvasTextItem TextItem(FVector2D(0.0f,0.0f), FText::Format(LOCTEXT("JetPackCharge", "JetPack Charge: {0}"), FText::AsNumber(jetPackController->GetJetPackCharge())), GEngine->GetLargeFont(), FLinearColor::Green);
-		Canvas->DrawItem(TextItem);
+		FCanvasTextItem JetPack(FVector2D(0.0f,0.0f), FText::Format(LOCTEXT("JetPackCharge", "JetPack Charge: {0}"), FText::AsNumber(jetPackController->GetJetPackCharge())), GEngine->GetLargeFont(), FLinearColor::Green);
+		Canvas->DrawItem(JetPack);
+		FCanvasTextItem HealthItem(FVector2D(0.0f, Canvas->ClipY - 20.0f), FText::Format(LOCTEXT("Health", "Health: {0}"), FText::AsNumber(jetPackController->GetHealth())), GEngine->GetLargeFont(), FLinearColor::Green);
+		Canvas->DrawItem(HealthItem);
+		if (!jetPackController->GetJetPackRechrageStatus())
+		{
+			const FVector2D FuelDrawPosition((Center.X -50.f),
+				(Center.Y));
+			FCanvasTileItem FuelItem(FuelDrawPosition, NoFuelText->Resource, FLinearColor::White);
+			FuelItem.BlendMode = SE_BLEND_Translucent;
+			Canvas->DrawItem(FuelItem);
+		}
 	}
 }

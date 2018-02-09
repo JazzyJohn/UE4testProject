@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeTestProjectCppCharacter() {}
 	TESTPROJECTCPP_API UClass* Z_Construct_UClass_ATestProjectCppCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_TestProjectCpp();
+	TESTPROJECTCPP_API UFunction* Z_Construct_UFunction_ATestProjectCppCharacter_OnTeleport();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
@@ -29,6 +30,27 @@ void EmptyLinkFunctionForGeneratedCodeTestProjectCppCharacter() {}
 // End Cross Module References
 	void ATestProjectCppCharacter::StaticRegisterNativesATestProjectCppCharacter()
 	{
+		UClass* Class = ATestProjectCppCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnTeleport", (Native)&ATestProjectCppCharacter::execOnTeleport },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_ATestProjectCppCharacter_OnTeleport()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "TestProjectCppCharacter.h" },
+				{ "ToolTip", "triggers when Character is teleported by Portal" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_ATestProjectCppCharacter, "OnTeleport", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00020400, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ATestProjectCppCharacter_NoRegister()
 	{
@@ -42,6 +64,9 @@ void EmptyLinkFunctionForGeneratedCodeTestProjectCppCharacter() {}
 			static UObject* (*const DependentSingletons[])() = {
 				(UObject* (*)())Z_Construct_UClass_ACharacter,
 				(UObject* (*)())Z_Construct_UPackage__Script_TestProjectCpp,
+			};
+			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_ATestProjectCppCharacter_OnTeleport, "OnTeleport" }, // 452309146
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -207,7 +232,7 @@ void EmptyLinkFunctionForGeneratedCodeTestProjectCppCharacter() {}
 				&ATestProjectCppCharacter::StaticClass,
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00800080u,
-				nullptr, 0,
+				FuncInfo, ARRAY_COUNT(FuncInfo),
 				PropPointers, ARRAY_COUNT(PropPointers),
 				"Game",
 				&StaticCppClassTypeInfo,
@@ -218,7 +243,7 @@ void EmptyLinkFunctionForGeneratedCodeTestProjectCppCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATestProjectCppCharacter, 3155083570);
+	IMPLEMENT_CLASS(ATestProjectCppCharacter, 521562342);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ATestProjectCppCharacter(Z_Construct_UClass_ATestProjectCppCharacter, &ATestProjectCppCharacter::StaticClass, TEXT("/Script/TestProjectCpp"), TEXT("ATestProjectCppCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATestProjectCppCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
